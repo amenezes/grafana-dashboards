@@ -14,532 +14,552 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.4.3"
+      "version": "5.2.4"
     },
     {
       "type": "panel",
       "id": "graph",
       "name": "Graph",
-      "version": ""
+      "version": "5.0.0"
     },
     {
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
-      "version": "1.0.0"
+      "version": "5.0.0"
     },
     {
       "type": "panel",
       "id": "singlestat",
       "name": "Singlestat",
-      "version": ""
+      "version": "5.0.0"
     },
     {
       "type": "panel",
       "id": "text",
       "name": "Text",
-      "version": ""
+      "version": "5.0.0"
     }
   ],
   "annotations": {
-    "list": []
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
   },
   "description": "minio dashboard",
   "editable": true,
-  "gnetId": null,
+  "gnetId": 6248,
   "graphTooltip": 0,
-  "hideControls": false,
   "id": null,
+  "iteration": 1547557148304,
   "links": [],
-  "refresh": "5s",
-  "rows": [
+  "panels": [
     {
-      "collapse": false,
-      "height": 164,
-      "panels": [
-        {
-          "content": "<img src=\"https://www.dropbox.com/s/s5z6rn7offp7ov3/Minio_Logo_White.png?raw=1\" style=\"height: 55px;\"></img>\n<img src=\"https://www.dropbox.com/s/59wm2aemin3cvsc/Minio_wm_light_32px.png?raw=1\" style=\"height: 40px;\"></img>\n<p style=\"margin-top: 10px;\"><small>\nMinio is a high performance distributed object storage server, designed for \nlarge-scale private cloud infrastructure. For more information, check out the <a href=\"https://docs.minio.io\">docs</a>.\n</small></p>",
-          "description": "Minio is a high performance distributed object storage server, designed for large-scale private cloud infrastructure. For more information, check out the docs.",
-          "id": 8,
-          "links": [],
-          "mode": "html",
-          "span": 4,
-          "title": "",
-          "transparent": true,
-          "type": "text"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUSDB}",
-          "description": "Start time of the Minio server",
-          "format": "dtdurations",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": false
-          },
-          "id": 1,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 8,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "time() - max(process_start_time_seconds)",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "Start time of the Minio server",
-              "metric": "process_start_time_seconds",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Uptime",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
+      "content": "<img src=\"https://www.dropbox.com/s/s5z6rn7offp7ov3/Minio_Logo_White.png?raw=1\" style=\"height: 55px;\"></img>\n<img src=\"https://www.dropbox.com/s/59wm2aemin3cvsc/Minio_wm_light_32px.png?raw=1\" style=\"height: 40px;\"></img>\n<p style=\"margin-top: 10px;\"><small>\nMinio is a high performance distributed object storage server, designed for \nlarge-scale private cloud infrastructure. For more information, check out the <a href=\"https://docs.minio.io\">docs</a>.\n</small></p>",
+      "description": "Minio is a high performance distributed object storage server, designed for large-scale private cloud infrastructure. For more information, check out the docs.",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 8,
+      "links": [],
+      "mode": "html",
+      "title": "",
+      "transparent": true,
+      "type": "text"
     },
     {
-      "collapse": false,
-      "height": 241,
-      "panels": [
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": "${DS_PROMETHEUSDB}",
+      "description": "Start time of the Minio server",
+      "format": "dtdurations",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": false
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 16,
+        "x": 8,
+        "y": 0
+      },
+      "id": 1,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
         {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "${DS_PROMETHEUSDB}",
-          "decimals": null,
-          "description": "Data sent by current Minio server instance",
-          "fill": 1,
-          "id": 4,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": true,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "span": 4,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "rate(minio_network_sent_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "Transmited:",
-              "metric": "minio_network_sent_bytes_total",
-              "refId": "A",
-              "step": 10
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Data Transmited",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "decbytes",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "decbytes",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
+          "name": "value to text",
+          "value": 1
         },
         {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "${DS_PROMETHEUSDB}",
-          "decimals": null,
-          "description": "Data received by current Minio server instance",
-          "fill": 1,
-          "id": 5,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": true,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "span": 4,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "rate(minio_network_received_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "Received:",
-              "metric": "minio_network_received_bytes_total",
-              "refId": "A",
-              "step": 10
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Data Received",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "decbytes",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "decbytes",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "${DS_PROMETHEUSDB}",
-          "description": "Data received x transmited by current Minio server instance",
-          "fill": 1,
-          "height": "",
-          "id": 6,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "span": 4,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "rate(minio_network_received_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "Received: ",
-              "metric": "minio_network_received_bytes_total",
-              "refId": "A",
-              "step": 10
-            },
-            {
-              "expr": "rate(minio_network_sent_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "Transmited:",
-              "refId": "B",
-              "step": 10
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Total In/Out Throughput",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "decbytes",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "decbytes",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
+          "name": "range to text",
+          "value": 2
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "time() - max(process_start_time_seconds)",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "Start time of the Minio server",
+          "metric": "process_start_time_seconds",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Uptime",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
     },
     {
-      "collapse": false,
-      "height": 250,
-      "panels": [
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_PROMETHEUSDB}",
+      "decimals": null,
+      "description": "Data sent by current Minio server instance",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 5
+      },
+      "id": 4,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
         {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "${DS_PROMETHEUSDB}",
-          "description": "The current aggregate time spent servicing all HTTP requests  in seconds",
-          "fill": 1,
-          "id": 7,
-          "legend": {
-            "avg": false,
-            "current": true,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"GET\",instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "GET",
-              "metric": "minio_http_requests_duration_seconds_count",
-              "refId": "A",
-              "step": 4
-            },
-            {
-              "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"POST\",instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "POST",
-              "metric": "minio_http_requests_duration_seconds_count",
-              "refId": "B",
-              "step": 4
-            },
-            {
-              "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"PUT\",instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "PUT",
-              "metric": "minio_http_requests_duration_seconds_count",
-              "refId": "C",
-              "step": 4
-            },
-            {
-              "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"HEAD\",instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "HEAD",
-              "metric": "minio_http_requests_duration_seconds_count",
-              "refId": "D",
-              "step": 4
-            },
-            {
-              "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"DELETE\",instance=\"$instance:$metrics_port\"}[5m])",
-              "format": "time_series",
-              "intervalFactor": 2,
-              "legendFormat": "DELETE",
-              "metric": "minio_http_requests_duration_seconds_count",
-              "refId": "E",
-              "step": 4
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "HTTP Requests duration/s",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ]
+          "expr": "rate(minio_network_sent_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "Transmited:",
+          "metric": "minio_network_sent_bytes_total",
+          "refId": "A",
+          "step": 10
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Data Transmited",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_PROMETHEUSDB}",
+      "decimals": null,
+      "description": "Data received by current Minio server instance",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 5
+      },
+      "id": 5,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": true,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(minio_network_received_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "Received:",
+          "metric": "minio_network_received_bytes_total",
+          "refId": "A",
+          "step": 10
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Data Received",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_PROMETHEUSDB}",
+      "description": "Data received x transmited by current Minio server instance",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 5
+      },
+      "height": "",
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(minio_network_received_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "Received: ",
+          "metric": "minio_network_received_bytes_total",
+          "refId": "A",
+          "step": 10
+        },
+        {
+          "expr": "rate(minio_network_sent_bytes_total{instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "Transmited:",
+          "refId": "B",
+          "step": 10
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total In/Out Throughput",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "decbytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DS_PROMETHEUSDB}",
+      "description": "The current aggregate time spent servicing all HTTP requests  in seconds",
+      "fill": 1,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 7,
+      "legend": {
+        "avg": false,
+        "current": true,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"GET\",instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "GET",
+          "metric": "minio_http_requests_duration_seconds_count",
+          "refId": "A",
+          "step": 4
+        },
+        {
+          "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"POST\",instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "POST",
+          "metric": "minio_http_requests_duration_seconds_count",
+          "refId": "B",
+          "step": 4
+        },
+        {
+          "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"PUT\",instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "PUT",
+          "metric": "minio_http_requests_duration_seconds_count",
+          "refId": "C",
+          "step": 4
+        },
+        {
+          "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"HEAD\",instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "HEAD",
+          "metric": "minio_http_requests_duration_seconds_count",
+          "refId": "D",
+          "step": 4
+        },
+        {
+          "expr": "rate(minio_http_requests_duration_seconds_sum{request_type=\"DELETE\",instance=\"$instance:$metrics_port\"}[5m])",
+          "format": "time_series",
+          "intervalFactor": 2,
+          "legendFormat": "DELETE",
+          "metric": "minio_http_requests_duration_seconds_count",
+          "refId": "E",
+          "step": 4
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "HTTP Requests duration/s",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
-  "schemaVersion": 14,
+  "refresh": "5s",
+  "schemaVersion": 16,
   "style": "dark",
   "tags": [
     "object-storage"
@@ -558,7 +578,7 @@
         "options": [],
         "query": "label_values(minio_total_disks,instance)",
         "refresh": 1,
-        "regex": "/([a-zA-Z]{1,})/i",
+        "regex": "/([a-zA-Z0-9-]{1,})/i",
         "sort": 1,
         "tagValuesQuery": "",
         "tags": [],
@@ -578,7 +598,7 @@
         "options": [],
         "query": "label_values(minio_total_disks,instance)",
         "refresh": 1,
-        "regex": "/(\\d{1,4})/i",
+        "regex": "/:(\\d{1,4})/i",
         "sort": 1,
         "tagValuesQuery": "",
         "tags": [],
@@ -619,5 +639,6 @@
   },
   "timezone": "",
   "title": "Minio",
-  "version": 4
+  "uid": "Xh28JKwmk",
+  "version": 2
 }
